@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta name="author" content="cynka02">
+    <title>Alphabet Idle</title>
+
+    <link rel="stylesheet" href="styles.css" />
+
+    
+</head>
+<body>
+    <div id="points-text"></div>
+    <div id="pps-info"></div>
+    <div id="buy-info">Buy Letters</div>
+    <div id="buy"></div>
+    <div id="produce-info">Produce Letters</div>
+    <div id="production-container">
+        <div id="queue-container">
+            <div id="queue-container2">
+                <div id="queue-display"></div>
+                <div id="queue">
+                    <div id="queue5"></div>
+                    <div id="queue4"></div>
+                    <div id="queue3"></div>
+                    <div id="queue2"></div>
+                    <div id="queue1"></div>
+                </div>
+            </div>
+        </div>
+        <div id="produce-container">
+            <div id="produce-now-container"><div id="produce-now">Buy more<br>letters</div></div>
+            <div id="produce-upgrade" onclick="upgrades.fasterProduction()"></div>
+        </div>
+        <div id="output-container">
+            <div id="output-container2">
+                <div id="output-display">Output String</div>
+                <div id="output"></div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="scripts/config.js"></script>
+<script src="scripts/loop.js"></script>
+<script src="scripts/utils.js"></script>
+<script src="scripts/player.js"></script>
+<script src="scripts/letters.js"></script>
+<script src="scripts/upgrades.js"></script>
+<script src="scripts/updateHTML.js"></script>
+<script src="scripts/main.js"></script>
+</html>
