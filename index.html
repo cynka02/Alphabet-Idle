@@ -11,32 +11,65 @@
     
 </head>
 <body>
+    <div id="tooltip"></div>
     <div id="points-text"></div>
     <div id="pps-info"></div>
     <div id="buy-info">Buy Letters</div>
     <div id="buy"></div>
     <div id="produce-info">Produce Letters</div>
     <div id="production-container">
-        <div id="queue-container">
-            <div id="queue-container2">
-                <div id="queue-display"></div>
-                <div id="queue">
-                    <div id="queue5"></div>
-                    <div id="queue4"></div>
-                    <div id="queue3"></div>
-                    <div id="queue2"></div>
-                    <div id="queue1"></div>
-                </div>
-            </div>
-        </div>
-        <div id="produce-container">
-            <div id="produce-now-container"><div id="produce-now">Buy more<br>letters</div></div>
-            <div id="produce-upgrade" onclick="upgrades.fasterProduction()"></div>
-        </div>
         <div id="output-container">
             <div id="output-container2">
                 <div id="output-display">Output String</div>
                 <div id="output"></div>
+            </div>
+        </div>
+        <div id="produce-container">
+            <div id="produce-now-container"><div id="produce-now">Buy more<br>letters</div></div>
+            <div id="produce-upgrade" onclick="upgrades.productionSpeedBuy()"></div>
+        </div>
+        <div id="queue-container">
+            <div id="queue-container2">
+                <div id="queue-display"></div>
+                <div id="queue">
+                    <div id="queue1"></div>
+                    <div id="queue2"></div>
+                    <div id="queue3"></div>
+                    <div id="queue4"></div>
+                    <div id="queue5"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="sections">
+        <div id="section1" class="sections" onclick="updates.sectionsWordsShow()">Words</div>
+        <div id="section2" class="sections">Automation</div>
+        <div id="section3" class="sections">Groups</div>
+        <div id="section4" class="sections">Prestige</div>
+    </div>
+    <div id="words-container">
+        <div id="words-info"><span style="font-size:22px;">Produce letters in specific order to create words</span><br><span style="font-size:12px;">*gray background means you have to unlock more letters</span></brt></div>
+        <div id="words-hint" onclick="words.buyHint()"></div>
+        <div id="words-all">
+            <div id="words-bonus1" class="words-bonus">
+                <div id="words-bonus1-desc" class="words-bonus-desc"></div>
+                <div id="words-bonus1-container" class="words-bonus-container"></div>
+            </div>
+            <div id="words-bonus2" class="words-bonus">
+                <div id="words-bonus2-desc" class="words-bonus-desc"></div>
+                <div id="words-bonus2-container" class="words-bonus-container"></div>
+            </div>
+            <div id="words-bonus3" class="words-bonus">
+                <div id="words-bonus3-desc" class="words-bonus-desc"></div>
+                <div id="words-bonus3-container" class="words-bonus-container"></div>
+            </div>
+            <div id="words-bonus4" class="words-bonus">
+                <div id="words-bonus4-desc" class="words-bonus-desc"></div>
+                <div id="words-bonus4-container" class="words-bonus-container"></div>
+            </div>
+            <div id="words-bonus5" class="words-bonus">
+                <div id="words-bonus5-desc" class="words-bonus-desc"></div>
+                <div id="words-bonus5-container" class="words-bonus-container"></div>
             </div>
         </div>
     </div>
@@ -47,6 +80,7 @@
 <script src="scripts/player.js"></script>
 <script src="scripts/letters.js"></script>
 <script src="scripts/upgrades.js"></script>
+<script src="scripts/words.js"></script>
 <script src="scripts/updateHTML.js"></script>
 <script src="scripts/main.js"></script>
 </html>

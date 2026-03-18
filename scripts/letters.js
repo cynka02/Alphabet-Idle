@@ -5,19 +5,21 @@ const letters = {
     },
 
     buy(letter){
-        if (player.points >= letterCosts[letter] && player.letterQueue.length < player.queueLimit) {
-            player.points -= letterCosts[letter];
+        if (player.points >= lettersCost[letter]*player.lettersPriceMult && player.letterQueue.length < player.queueLimit) {
+            player.points -= lettersCost[letter]*player.lettersPriceMult;
             if (!player.unlockedLetters.includes(this.next(letter))){
-                if (player.unlockedLetters.length == 1){
-                    updates.showProduce();
-                }
                 player.unlockedLetters.push(this.next(letter));
-                updates.lettersCreateDivs();
+                updates.lettersCreate();
+                updates.wordsCreate();
+                updates.wordsCheck();
             }
-            player.letterQueue.push({name: letter, productionTime: letterProductionTime[letter]});
-            updates.queueDisplay(player.letterQueue.length, player.queueLimit);
-            updates.queueLetters(player.letterQueue);
-            updates.updateAll();
+            player.letterQueue.push({name: letter, productionTime: lettersProductionTime[letter]});
+            updates.queueLettersDisplay();
+            updates.queueTextDisplay();
+            
+            if (player.unlockedLetters.length >= 2){
+                updates.productionShow();
+            }
         }
     }
 }
